@@ -32,8 +32,6 @@
 
   });
 
-  return;
-
   api.createWidget('nav-links', {
     tagName: 'nav.links',
 
@@ -43,6 +41,9 @@
       return [h('ul.nav.nav-pills', links.map(l => h('li', {}, l)))];
     }
   });
+
+  return;
+
 
   api.createWidget('nav-icons', {
     tagName: 'ul.icons.clearfix',
