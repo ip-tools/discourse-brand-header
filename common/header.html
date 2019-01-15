@@ -2,8 +2,11 @@
 
   /**
    *
-   * Activate widget in the CSS domain at runtime
-   * to hack the rendering problem on "static" and "no_ember" pages away.
+   * Activate widget in the CSS domain at runtime to hack
+   * the rendering problem on "static" and "no_ember" pages away.
+   *
+   * See also:
+   * https://meta.discourse.org/t/brand-header-theme-component-breaks-page-layout-on-static-and-no-ember-pages/106544/4
    *
    * We are using `.insertRule` here as CSS rules like `.docked .d-header`
    * can not be placed on specific elements, esp. when they are
