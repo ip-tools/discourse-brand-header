@@ -1,5 +1,5 @@
-<script type="text/discourse-plugin" version="0.8">
-
+<script type="application/javascript">
+  console.info('Plugin global');
   if (!('Discourse' in window)) {
     window.Discourse = {};
   }
@@ -10,6 +10,11 @@
       });
     };
   }
+
+</script>
+<script type="text/discourse-plugin" version="0.8">
+
+  console.info('Plugin instance');
 
   const { h } = require('virtual-dom');
   const { applyDecorators } = require('discourse/widgets/widget');
