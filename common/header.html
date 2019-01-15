@@ -4,9 +4,14 @@
 
   // Activate widget in the CSS domain at runtime.
   $(document).ready(function() {
-    $('.d-header').css('margin-top', '48px');
-    $('.d-header.docked').css('margin-top', '0');
+
     //$('.d-header').addClass('b-header-active');
+
+    //$('.d-header').css('margin-top', '48px');
+    //$('.d-header.docked').css('margin-top', '0');
+
+    var stylesheet = document.styleSheets[0];
+    stylesheet.insertRule('.d-header { margin-top: 48px; }');
   });
 
   const { h } = require('virtual-dom');
