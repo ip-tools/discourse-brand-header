@@ -12,9 +12,14 @@
     //$('.d-header').css('margin-top', '48px');
     //$('.d-header.docked').css('margin-top', '0');
 
-    var stylesheet = _.last(document.styleSheets);
-    stylesheet.insertRule('.d-header { margin-top: 48px }', stylesheet.cssRules.length);
-    stylesheet.insertRule('.docked .d-header { margin-top: 0 }', stylesheet.cssRules.length);
+    try {
+      yscd
+      var stylesheet = _.last(document.styleSheets);
+      stylesheet.insertRule('.d-header { margin-top: 48px }', stylesheet.cssRules.length);
+      stylesheet.insertRule('.docked .d-header { margin-top: 0 }', stylesheet.cssRules.length);
+    } catch (ex) {
+      console.error('Brand header activation failed:', ex);
+    }
   });
 
   const { h } = require('virtual-dom');
