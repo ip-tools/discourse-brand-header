@@ -1,5 +1,16 @@
 <script type="text/discourse-plugin" version="0.8">
 
+  if (!('Discourse' in window)) {
+    window.Discourse = {};
+  }
+  if ('Discourse' in window && !('_registerPluginCode' in window.Discourse)) {
+    window.Discourse._registerPluginCode = function() {
+      $(document).ready(function() {
+        $('.d-header').css('margin-top', 'initial');
+      });
+    };
+  }
+
   const { h } = require('virtual-dom');
   const { applyDecorators } = require('discourse/widgets/widget');
   const SiteHeaderComponent = require('discourse/components/site-header').default;
