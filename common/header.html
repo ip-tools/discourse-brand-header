@@ -3,10 +3,10 @@
   console.info('Plugin instance');
 
   // Activate widget in the CSS domain at runtime.
-  //$('.d-header').css('margin-top', '48px');
-  //$('.docked .d-header').css('margin-top', '0');
   $(document).ready(function() {
-    $('.d-header').addClass('b-header-active');
+    $('.d-header').css('margin-top', '48px');
+    $('.docked .d-header').css('margin-top', '0');
+    //$('.d-header').addClass('b-header-active');
   });
 
   const { h } = require('virtual-dom');
