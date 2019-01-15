@@ -1,11 +1,13 @@
 <script type="application/javascript">
-  console.info('Plugin global');
+  console.info('Plugin global:', window.Discourse);
   if (!('Discourse' in window)) {
     window.Discourse = {};
   }
   if ('Discourse' in window && !('_registerPluginCode' in window.Discourse)) {
+    console.info('Plugin global - _registerPluginCode:', window.Discourse);
     window.Discourse._registerPluginCode = function() {
       $(document).ready(function() {
+        console.info('Plugin global - document.ready:', window.Discourse);
         $('.d-header').css('margin-top', 'initial');
       });
     };
